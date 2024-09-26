@@ -100,7 +100,7 @@ class Llava:
 
   def gradio(self):
     gr.close_all()
-    icon_url = ".logo.png"  
+    icon_url = "./logo.png"  
     demo = gr.Interface(fn=self.captioner,
                         inputs=[gr.Image(label="Upload image", type="pil"), gr.Textbox(label="Prompt"), gr.Textbox(label="Temperature")],
                         outputs=[gr.Textbox(label="Caption"),gr.Textbox(label="Time")],
